@@ -1,0 +1,49 @@
+$font-size = 14px
+
+$color =  #333
+// @import 'var.scss';
+// @import 'theme.scss';
+
+$black = #000
+$white = #fff
+$gray-1 = #f7f8fa
+$gray-2 = #f2f3f5
+$gray-3 = #ebedf0
+$gray-4 = #dcdee0
+$gray-5 = #c8c9cc
+$gray-6 = #969799
+$gray-7 = #646566
+$gray-8 = #323233
+
+$primary = #1989fa
+$red = #ee0a24
+$orange = #ed6a0c
+$yellow = #ffd01e
+$green = #07c160
+$gray = $gray-8
+
+for $val, $index in (1..9)
+    define('$primary-light-' + $index, mix($white, $primary, $val * 10%))
+
+$red-soft = mix($white, $red, 20%)
+$red-light = mix($white, $red, 40%)
+$red-lighter = mix($white, $red, 60%)
+$red-extra-light = mix($white, $red, 80%)
+
+$green-soft = mix($white, $green, 20%)
+$green-light = mix($white, $green, 40%)
+$green-lighter = mix($white, $green, 60%)
+$green-extra-light = mix($white, $green, 80%)
+
+$yellow-soft = mix($white, $yellow, 20%)
+$yellow-light = mix($white, $yellow, 40%)
+$yellow-lighter = mix($white, $yellow, 60%)
+$yellow-extra-light = mix($white, $yellow, 80%)
+
+$orange-soft = mix($white, $orange, 20%)
+$orange-light = mix($white, $orange, 40%)
+$orange-lighter = mix($white, $orange, 60%)
+$orange-extra-light = mix($white, $orange, 80%)
+
+$border-color = $gray-3
+$background-color = $gray-2

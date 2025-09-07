@@ -1,0 +1,58 @@
+$vars = {
+    $font-size: 14px,
+    $color:  #333,
+    $black: #000,
+    $white: #fff,
+    $gray-1: #f7f8fa,
+    $gray-2: #f2f3f5,
+    $gray-3: #ebedf0,
+    $gray-4: #dcdee0,
+    $gray-5: #c8c9cc,
+    $gray-6: #969799,
+    $gray-7: #646566,
+    $gray-8: #323233,
+
+    $primary: #1989fa,
+    $red: #ee0a24,
+    $orange: #ed6a0c,
+    $yellow: #ffd01e,
+    $green: #07c160,
+    $gray: $gray-8,
+
+    $primary-light-1: mix($white, $primary, 10%),
+    $primary-light-2: mix($white, $primary, 20%),
+    $primary-light-3: mix($white, $primary, 30%),
+    $primary-light-4: mix($white, $primary, 40%),
+    $primary-light-5: mix($white, $primary, 50%),
+    $primary-light-6: mix($white, $primary, 60%),
+    $primary-light-7: mix($white, $primary, 70%),
+    $primary-light-8: mix($white, $primary, 80%),
+    $primary-light-9: mix($white, $primary, 90%),
+
+    $red-soft: mix($white, $red, 20%),
+    $red-light: mix($white, $red, 40%),
+    $red-lighter: mix($white, $red, 60%),
+    $red-extra-light: mix($white, $red, 80%),
+
+    $green-soft: mix($white, $green, 20%),
+    $green-light: mix($white, $green, 40%),
+    $green-lighter: mix($white, $green, 60%),
+    $green-extra-light: mix($white, $green, 80%),
+
+    $yellow-soft: mix($white, $yellow, 20%),
+    $yellow-light: mix($white, $yellow, 40%),
+    $yellow-lighter: mix($white, $yellow, 60%),
+    $yellow-extra-light: mix($white, $yellow, 80%),
+
+    $orange-soft: mix($white, $orange, 20%),
+    $orange-light: mix($white, $orange, 40%),
+    $orange-lighter: mix($white, $orange, 60%),
+    $orange-extra-light: mix($white, $orange, 80%),
+
+    $border-color: $gray-3,
+    $background-color: $gray-2,
+}
+
+:export
+    for $key, $val in $vars
+        {$key}: $val

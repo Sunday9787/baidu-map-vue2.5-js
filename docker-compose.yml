@@ -1,0 +1,9 @@
+version: '3.3'
+
+services:
+  web:
+    image: baidu-map-demo-vue2.5:v0.1.0
+    ports:
+      - 80:80
+    volumes:
+      - './nginx.conf:/etc/nginx/conf.d/default.conf'

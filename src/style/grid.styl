@@ -1,0 +1,19 @@
+$grid-size = 24
+
+.row
+    display flex
+
+.col
+    flex: 1
+
+col($column, $grid-size)
+    .col-{$column}
+            width ($column / $grid-size) * 100%
+
+col-offset($column, $grid-size)
+    .col-offset-{$column}
+        margin-left ($column / $grid-size) * 100%
+
+for $column in (1..24)
+    col($column, $grid-size)
+    col-offset($column, $grid-size)

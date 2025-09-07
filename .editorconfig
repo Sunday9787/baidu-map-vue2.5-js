@@ -1,0 +1,14 @@
+root = true
+
+[*]
+indent_style = space
+charset = utf-8
+trim_trailing_whitespace = false
+insert_final_newline = true
+end_of_line = lf
+
+[*.(js,ts,tsx,jsx,vue)]
+indent_size = 2
+
+[*.(styl,scss,less,sass)]
+indent_size = 4

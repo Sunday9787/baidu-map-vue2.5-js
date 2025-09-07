@@ -1,0 +1,19 @@
+$colors = #726a95, #709fb0, #a0c1b8, #f4ebc1
+
+.row-example
+    margin 0 20px
+    text-align: center
+
+    for $index in (1..24)
+        .col-{$index}
+            padding: 40px 0
+            background-color: $colors[$index%4]
+
+.row-example2
+    .col-6
+        padding: 40px 0
+
+
+// for $index in (1..4)
+//     .col-6::nth-child($index)
+//         background-color: $colors[$index % 2]

@@ -1,0 +1,37 @@
+.map-view
+    height 600px
+
+.map-container
+    position relative
+
+.map-tools
+    position relative
+    display flex
+    padding 0 100px
+
+.map-tools-menu
+    position relative
+    display flex
+
+    &__name
+        display block
+        min-width 100px
+        font-size 17px
+        line-height 45px
+        color #4d79ff
+        text-align center
+        text-decoration none
+        background-color #fff
+        border 1px solid #4d79ff
+        border-radius 22.5px
+
+        &.primary
+            color #fff
+            background-color #4d79ff
+
+        &.disable
+            background-color #c6c6c6
+            border-color #c6c6c6
+
+        & + &
+            margin-left 15px

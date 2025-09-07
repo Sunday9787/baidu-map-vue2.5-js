@@ -1,0 +1,31 @@
+$type = {
+    default: $black,
+    primary: $primary,
+    green: $green,
+    yellow: $yellow,
+    red: $red,
+}
+
+generateShadow($c)
+    box-shadow 0 unit(2, 'px') unit(4, 'px') 0 rgba($c, 0.075)
+
+    &-mini
+        box-shadow 0 unit(1, 'px') unit(2, 'px') 0 rgba($c, 0.05)
+
+    &-small
+        box-shadow 0 unit(3, 'px') unit(6, 'px') unit(-2, 'px') rgba($c, 0.1)
+
+    &-large
+        box-shadow 0 unit(4, 'px') unit(8, 'px') unit(-4, 'px') rgba($c, 0.25)
+
+.shadow
+    for $key, $val in $type
+        if $key == default
+            generateShadow $val
+        else
+            &-{$key}
+                generateShadow $val
+    &-inner
+        box-shadow inset 0 unit(2, 'px') unit(4, 'px') 0 rgba(0, 0, 0, 0.06)
+    &-none
+        box-shadow none

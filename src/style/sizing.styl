@@ -1,0 +1,43 @@
+$types = w, h, wh
+
+mode($type)
+    if $type == h
+        return height
+    else
+        return width
+
+.icon
+    for $v in (10..50)
+        $i = $v * 2
+        &-{$i}
+            width: unit($i, 'px')
+            height: unit($i, 'px')
+
+for $i in (1..4)
+    for $type in $types
+        .{$type}-{$i * 25}
+            if $type == wh
+                width $i * 25%
+                height $i * 25%
+            else
+                {mode($type)} $i * 25%
+
+.wh
+.w
+    &-screen
+        width 100vw
+
+    &-auto
+        width auto
+
+.wh
+.h
+    &-screen
+        height 100vh
+
+    &-auto
+        height auto
+
+for $i in (12..25)
+    .line-h{$i}
+        line-height unit($i / 10, 'px')

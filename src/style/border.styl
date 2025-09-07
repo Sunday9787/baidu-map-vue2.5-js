@@ -1,0 +1,132 @@
+hairline($color = $border-color)
+    position absolute
+
+    top -50%
+    right -50%
+    bottom -50%
+    left -50%
+    pointer-events none
+    border 0 solid $color
+    content ' '
+    transform scale(0.5);
+    box-sizing border-box
+
+$types = top, bottom, left, right, solid, horizontal, vertical
+
+.border
+    for $type in $types
+        &-{$type}
+            position relative
+
+            &:after
+                hairline()
+
+        if $type == horizontal
+            &:after
+                border-width 0 1px
+
+        else if $type == vertical
+            &:after
+                border-width 1px 0
+
+        else if $type == solid
+            &:after
+                border-width 1px
+
+            &--none:after
+                border none !important
+
+        else
+            &:after
+                border-{$type}-width 1px
+
+            &--none:after
+                border-{$type} none !important
+
+    &-radius
+        for $i in (1..8)
+            if $i == 1
+                &,
+                &:after
+                    border-radius unit($i * 5, 'px')
+            else
+                &-{$i * 5}
+                    &,
+                    &:after
+                        border-radius unit($i * 5, 'px')
+
+                    &-none
+                        &,
+                        &::after
+                            border-radius none
+
+                    &-circle
+                        &,
+                        &::after
+                            border-radius 100%
+
+    &-color
+        border-color $border-color
+
+        &:after
+            border-color $border-color
+
+    &-primary
+        border-color $primary
+
+        &:after
+            border-color $primary
+
+    &-green
+        border-color $green
+
+        &:after
+            border-color $green
+
+    &-yellow
+        border-color $yellow
+
+        &:after
+            border-color $yellow
+
+    &-orange
+        border-color $orange
+
+        &:after
+            border-color $orange
+
+    &-red
+        border-color $red
+
+        &:after
+            border-color $red
+
+    &-gray
+        border-color $gray-8
+
+        &:after
+            border-color $gray-8
+
+    &-light
+        border-color $gray-6
+
+        &:after
+            border-color $gray-6
+
+    &-lighter
+        border-color $gray-4
+
+        &:after
+            border-color $gray-4
+
+    &-white
+        border-color $white
+
+        &:after
+            border-color $white
+
+    &-black
+        border-color $black
+
+        &:after
+            border-color $black

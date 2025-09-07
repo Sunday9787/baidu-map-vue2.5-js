@@ -1,0 +1,11 @@
+ellipsis($line = 1)
+    if $line > 1
+        display -webkit-box
+        overflow hidden
+        text-overflow ellipsis
+        -webkit-line-clamp $line
+        -webkit-box-orient vertical
+    else
+        overflow hidden
+        text-overflow ellipsis
+        white-space nowrap

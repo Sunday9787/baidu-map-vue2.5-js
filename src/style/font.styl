@@ -1,0 +1,26 @@
+.font
+    for $i in (10..30)
+        &-{$i}
+            font-size unit($i, 'px')
+
+    &-0
+        font-size 0
+
+    &-weight
+        &-bold
+            font-weight 700
+
+        &-bolder
+            font-weight bolder
+
+        &-normal
+            font-weight 400
+
+        &-light
+            font-weight 300
+
+        &-lighter
+            font-weight lighter
+
+    &-italic
+        font-style italic

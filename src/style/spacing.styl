@@ -1,0 +1,53 @@
+$position = {
+  top: t,
+  right: r,
+  bottom: b,
+  left: l,
+  horizontal: h,
+  vertical: v,
+}
+
+for $i in (0..10)
+   .m-{$i * 5}
+        margin $i * 5px
+
+   .p-{$i * 5}
+        padding $i * 5px
+
+   for $key, $val in $position
+        if $val == h
+            .mh-{$i * 5}
+                margin-right $i * 5px
+                margin-left $i * 5px
+
+            .ph-{$i * 5}
+                padding-right $i * 5px
+                padding-left $i * 5px
+        else if $val == v
+            .mv-{$i * 5}
+                margin-top $i * 5px
+                margin-bottom $i * 5px
+
+            .pv-{$i * 5}
+                padding-top $i * 5px
+                padding-bottom $i * 5px
+        else
+            .m{$val}-{$i * 5}
+                margin-{$key} $i * 5px
+
+            .p{$val}-{$i * 5}
+                padding-{$key} $i * 5px
+
+.safeArea-p
+  padding-bottom constant(safe-area-inset-bottom)
+  padding-bottom env(safe-area-inset-bottom)
+
+.safeArea-m
+  margin-bottom constant(safe-area-inset-bottom)
+  margin-bottom env(safe-area-inset-bottom)
+
+
+
+
+:export
+    position $position.left

@@ -1,0 +1,4 @@
+*.d.ts
+vue.config.js
+/dist
+/plop-templates
